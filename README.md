@@ -1,11 +1,11 @@
-# RN-Animating-Properties
+# RN-Animated-Functions
 
-A path to learn animating properties including opacity, interpolation, translation , scaling etc
+Mastering React Native animated functions like `Animated.Event`, `Animated.loop`, `Animated.decay` and math functions.
 
 ## What I Learned
 
-- Use of different animation properties in React Native.
-- Animated API of the React Native and the methods it provides.
-- Use **Animated.View** for views that can be animated.
-- Apply different type of animations using Animated API.
-- Apply **Opacity**,**Translate**, **Scaling**, **Interpolation** animations to views.
+- Use of different animation functions in React Native.
+- Animated API of the React Native and the functions it provides.
+- Use **Animated.Event** for `PanResponders` and `ScrollView`.
+- Apply different type of animations using Animated Functions.
+- Apply **Decay**,**Loop**, **Math**, **Transformation** animations to views.
