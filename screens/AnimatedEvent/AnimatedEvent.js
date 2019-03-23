@@ -1,5 +1,6 @@
 import React from "react";
 import { Animated, View, TouchableWithoutFeedback } from "react-native";
+import { ScrollView } from "react-native-gesture-handler";
 
 class AnimatedEvent extends React.Component {
   state = {
@@ -20,26 +21,34 @@ class AnimatedEvent extends React.Component {
 
   render() {
     const { animation } = this.state;
-    const animatedStyle = {
-      transform: [{ translateY: animation }]
+
+    const backgroundInterpolate = animation.interpolate({
+      inputRange: [0, 3000],
+      outputRange: ["rgb(255,99,71)", "rgb(99,71,255)"]
+    });
+    const backgroundStyle = {
+      backgroundColor: backgroundInterpolate
     };
     return (
       <View
         style={{
-          flex: 1,
-          backgroundColor: "#fff",
-          justifyContent: "center",
-          alignItems: "center"
+          flex: 1
         }}
       >
-        <TouchableWithoutFeedback onPress={this.startAnimation}>
-          <Animated.View
-            style={[
-              { height: 100, width: 100, backgroundColor: "tomato" },
-              animatedStyle
-            ]}
-          />
-        </TouchableWithoutFeedback>
+        <ScrollView
+          scrollEventThrottle={16}
+          onScroll={Animated.event([
+            {
+              nativeEvent: {
+                contentOffset: {
+                  y: animation
+                }
+              }
+            }
+          ])}
+        >
+          <Animated.View style={[{ height: 3000 }, backgroundStyle]} />
+        </ScrollView>
       </View>
     );
   }
