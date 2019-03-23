@@ -1,7 +1,7 @@
 import React from "react";
 import { Animated, View, TouchableWithoutFeedback } from "react-native";
 
-class Interpolate extends React.Component {
+class InterpolateLoop extends React.Component {
   state = {
     rotationAnimation: new Animated.Value(0)
   };
@@ -63,4 +63,4 @@ class Interpolate extends React.Component {
   }
 }
 
-export default Interpolate;
+export default InterpolateLoop;

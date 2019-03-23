@@ -1,31 +1,27 @@
 import React from "react";
-import { Animated, Text, View, TouchableWithoutFeedback } from "react-native";
+import { Animated, View, TouchableWithoutFeedback } from "react-native";
 
-class Scale extends React.Component {
+class AnimatedEvent extends React.Component {
   state = {
-    animation: new Animated.Value(1)
+    animation: new Animated.Value(0)
   };
 
   startAnimation = () => {
-    this.state.animation.addListener(({value}) => {
-      console.log(value);
-    })
-    Animated.spring(this.state.animation, {
-      toValue: 2,
-      friction: 2,
-      tension: 160
+    Animated.timing(this.state.animation, {
+      toValue: 200,
+      duration: 1500
     }).start(() => {
       Animated.timing(this.state.animation, {
-        toValue: 1,
-        duration: 100
-      }).start()
+        toValue: 0,
+        duration: 1500
+      }).start();
     });
   };
 
   render() {
     const { animation } = this.state;
     const animatedStyle = {
-      transform: [{ scale: animation }]
+      transform: [{ translateY: animation }]
     };
     return (
       <View
@@ -42,13 +38,11 @@ class Scale extends React.Component {
               { height: 100, width: 100, backgroundColor: "tomato" },
               animatedStyle
             ]}
-          >
-            <Text>Spring Function</Text>
-          </Animated.View>
+          />
         </TouchableWithoutFeedback>
       </View>
     );
   }
 }
 
-export default Scale;
+export default AnimatedEvent;

@@ -29,26 +29,39 @@ export default class HomeScreen extends React.Component {
             alignItems: "center"
           }}
         >
-          <Button
-            title="Opacity"
-            onPress={() => this.props.navigation.navigate("Opacity")}
-          />
-          <Button
-            title="Translate"
-            onPress={() => this.props.navigation.navigate("Translate")}
-          />
-          <Button
-            title="Spring Function"
-            onPress={() => this.props.navigation.navigate("Scale")}
-          />
-          <Button
-            title="Absolute Position"
-            onPress={() => this.props.navigation.navigate("AbsolutePosition")}
-          />
-          <Button
-            title="Loop Function"
-            onPress={() => this.props.navigation.navigate("Interpolate")}
-          />
+          <TouchableOpacity
+            onPress={() => this.props.navigation.navigate("ScaleSpring")}
+            style={{
+              padding: 10,
+              borderRadius: 7,
+              marginBottom: 15,
+              backgroundColor: "tomato"
+            }}
+          >
+            <Text style={{ fontSize: 15 }}>Spring Function</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => this.props.navigation.navigate("InterpolateLoop")}
+            style={{
+              padding: 10,
+              borderRadius: 7,
+              marginBottom: 15,
+              backgroundColor: "tomato"
+            }}
+          >
+            <Text style={{ fontSize: 15 }}>Loop Function</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => this.props.navigation.navigate("AnimatedEvent")}
+            style={{
+              padding: 10,
+              borderRadius: 7,
+              marginBottom: 15,
+              backgroundColor: "tomato"
+            }}
+          >
+            <Text style={{ fontSize: 15 }}>Animated Event</Text>
+          </TouchableOpacity>
         </View>
       </View>
     );

@@ -1,32 +1,24 @@
 import React from "react";
 import { createAppContainer, createStackNavigator } from "react-navigation";
-import Opacity from "../screens/Opacity/Opacity";
 import HomeScreen from "../screens/HomeScreen/HomeScreen";
-import Translate from "../screens/Translate/TranslateScreen";
-import Scale from "../screens/Scale/ScaleScreen";
-import Absolute from "../screens/AbsolutePosition/AbsolutePosition";
-import Interpolate from "../screens/Interpolate/Interpolate";
+import ScaleSpring from "../screens/ScaleSpring/ScaleScreenSpring";
+import InterpolateLoop from "../screens/InterpolateLoop/InterpolateLoop";
+import AnimatedEvent from "../screens/AnimatedEvent/AnimatedEvent";
 
 const RootStack = createStackNavigator(
   {
     Home: {
       screen: HomeScreen
     },
-    Opacity: {
-      screen: Opacity
+    ScaleSpring: {
+      screen: ScaleSpring
     },
-    Translate: {
-      screen: Translate
+    InterpolateLoop: {
+      screen: InterpolateLoop
     },
-    Scale: {
-      screen: Scale
+    AnimatedEvent: {
+      screen: AnimatedEvent
     },
-    AbsolutePosition: {
-      screen: Absolute
-    },
-    Interpolate: {
-      screen: Interpolate
-    }
   },
 
   {
