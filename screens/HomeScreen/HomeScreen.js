@@ -21,7 +21,7 @@ export default class HomeScreen extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.title}>Animating Properties</Text>
+        <Text style={styles.title}>Animating Functions</Text>
         <View
           style={{
             alignSelf: "stretch",

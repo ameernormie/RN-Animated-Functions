@@ -7,9 +7,9 @@ class ScaleSpring extends React.Component {
   };
 
   startAnimation = () => {
-    this.state.animation.addListener(({value}) => {
-      console.log(value);
-    })
+    // this.state.animation.addListener(({value}) => {
+    //   console.log(value);
+    // })
     Animated.spring(this.state.animation, {
       toValue: 2,
       friction: 2,
@@ -18,7 +18,7 @@ class ScaleSpring extends React.Component {
       Animated.timing(this.state.animation, {
         toValue: 1,
         duration: 100
-      }).start()
+      }).start();
     });
   };
 
