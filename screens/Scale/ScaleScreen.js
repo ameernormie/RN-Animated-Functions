@@ -7,21 +7,25 @@ class Scale extends React.Component {
   };
 
   startAnimation = () => {
-    Animated.timing(this.state.animation, {
-      toValue: -1,
-      duration: 1500
+    this.state.animation.addListener(({value}) => {
+      console.log(value);
+    })
+    Animated.spring(this.state.animation, {
+      toValue: 2,
+      friction: 2,
+      tension: 160
     }).start(() => {
       Animated.timing(this.state.animation, {
         toValue: 1,
-        duration: 1500
-      }).start();
+        duration: 100
+      }).start()
     });
   };
 
   render() {
     const { animation } = this.state;
     const animatedStyle = {
-      transform: [{ scaleX: animation }]
+      transform: [{ scale: animation }]
     };
     return (
       <View
@@ -39,7 +43,7 @@ class Scale extends React.Component {
               animatedStyle
             ]}
           >
-            <Text>FLIP THIS TEXT</Text>
+            <Text>Spring Function</Text>
           </Animated.View>
         </TouchableWithoutFeedback>
       </View>

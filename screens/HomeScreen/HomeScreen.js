@@ -38,7 +38,7 @@ export default class HomeScreen extends React.Component {
             onPress={() => this.props.navigation.navigate("Translate")}
           />
           <Button
-            title="Scale"
+            title="Spring Function"
             onPress={() => this.props.navigation.navigate("Scale")}
           />
           <Button
@@ -46,7 +46,7 @@ export default class HomeScreen extends React.Component {
             onPress={() => this.props.navigation.navigate("AbsolutePosition")}
           />
           <Button
-            title="Interpolation"
+            title="Loop Function"
             onPress={() => this.props.navigation.navigate("Interpolate")}
           />
         </View>
