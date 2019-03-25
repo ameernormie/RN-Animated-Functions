@@ -5,6 +5,7 @@ import ScaleSpring from "../screens/ScaleSpring/ScaleScreenSpring";
 import InterpolateLoop from "../screens/InterpolateLoop/InterpolateLoop";
 import AnimatedEvent from "../screens/AnimatedEvent/AnimatedEvent";
 import DecayScreen from "../screens/Decay/DecayScreen";
+import Interpolation from "../screens/Interpolations/Interpolations";
 
 const RootStack = createStackNavigator(
   {
@@ -22,6 +23,9 @@ const RootStack = createStackNavigator(
     },
     DecayScreen: {
       screen: DecayScreen
+    },
+    Interpolation: {
+      screen: Interpolation
     }
   },
 

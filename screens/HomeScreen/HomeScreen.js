@@ -73,6 +73,17 @@ export default class HomeScreen extends React.Component {
           >
             <Text style={{ fontSize: 15 }}>Decay Function</Text>
           </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => this.props.navigation.navigate("Interpolation")}
+            style={{
+              padding: 10,
+              borderRadius: 7,
+              marginBottom: 15,
+              backgroundColor: "tomato"
+            }}
+          >
+            <Text style={{ fontSize: 15 }}>Interpolation Examples</Text>
+          </TouchableOpacity>
         </View>
       </View>
     );
